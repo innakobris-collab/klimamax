@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>KlimaMax — Klimatechnik für Unternehmen und Zuhause in NRW</title>
 <meta name="description" content="KlimaMax — Klimatechnik in NRW. Kühlen. Heizen. Sicher betreut. Vom Serverraum bis zur Praxis: Beratung, Montage und Wartung aus einer Hand." />
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23201810'/><text x='50%25' y='50%25' dy='.34em' text-anchor='middle' font-family='Georgia,serif' font-size='29' font-weight='600' fill='%23C9A15A'>KM</text></svg>">
+<meta property="og:title" content="KlimaMax — Klimatechnik für Unternehmen und Zuhause in NRW" />
+<meta property="og:description" content="Kühlen. Heizen. Sicher betreut. Vom Serverraum bis zur Praxis — Beratung, Montage und Wartung aus einer Hand." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://klimamax.vercel.app/images/hero.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -111,12 +117,13 @@ header:not(.solid) .burger span{background:var(--paper)}
 .marquee-track span::after{content:"✦";color:var(--brass);font-style:normal;font-size:12px;position:absolute;right:-6px;top:50%;transform:translateY(-50%)}
 @keyframes scroll{to{transform:translateX(-50%)}}
 
-/* ---- TRUST ---- */
-.trust{background:var(--coffee);color:var(--paper)}
-.trust .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:34px 48px}
-.trust-item{display:flex;align-items:center;gap:14px;font-size:12.5px;letter-spacing:.1em;font-weight:300;color:rgba(248,243,234,.88)}
-.trust-item svg{width:21px;height:21px;stroke:var(--brass);flex-shrink:0}
-.trust-star{color:var(--brass);letter-spacing:.18em}
+/* ---- BRANDS ---- */
+.brands{background:var(--coffee);color:var(--paper)}
+.brands .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px 48px;flex-wrap:wrap;padding:30px 48px}
+.brands-label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);flex-shrink:0}
+.brands-list{display:flex;align-items:center;gap:14px 44px;flex-wrap:wrap}
+.brands-list span{font-family:var(--serif);font-size:23px;letter-spacing:.04em;color:rgba(248,243,234,.82);position:relative}
+.brands-list span+span::before{content:"";position:absolute;left:-23px;top:50%;width:3px;height:3px;border-radius:50%;background:rgba(201,161,90,.6);transform:translateY(-50%)}
 
 /* ---- SECTIONS ---- */
 .pad{padding:150px 0}.pad-sm{padding:110px 0}
@@ -278,6 +285,18 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
 .band .q{font-family:var(--serif);font-style:italic;font-size:clamp(30px,4.6vw,64px);line-height:1.3;max-width:960px;margin:0 auto;color:var(--paper);font-weight:300}
 .band .src{margin-top:34px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--brass-lt)}
 
+/* ---- HERO INTRO ---- */
+@keyframes heroIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes heroFade{from{opacity:0}to{opacity:1}}
+.hero-left-inner>*{opacity:0;animation:heroIn .95s cubic-bezier(.2,.6,.2,1) forwards}
+.hero-left-inner>*:nth-child(1){animation-delay:.15s}
+.hero-left-inner>*:nth-child(2){animation-delay:.28s}
+.hero-left-inner>*:nth-child(3){animation-delay:.41s}
+.hero-left-inner>*:nth-child(4){animation-delay:.54s}
+.hero-left-inner>*:nth-child(5){animation-delay:.67s}
+.hero-right{animation:heroFade 1.5s ease both}
+@media(prefers-reduced-motion:reduce){.hero-left-inner>*,.hero-right{animation:none;opacity:1}}
+
 /* ---- REVEAL ---- */
 .reveal{opacity:0;transform:translateY(38px);transition:opacity 1.1s cubic-bezier(.2,.6,.2,1),transform 1.1s cubic-bezier(.2,.6,.2,1)}
 .reveal.in{opacity:1;transform:none}
@@ -317,7 +336,10 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   .band{background-attachment:scroll}
 }
 @media(max-width:560px){
-  .trust-item:nth-child(n+4){display:none}
+  .brands .wrap{flex-direction:column;align-items:flex-start;gap:16px;padding:24px 26px}
+  .brands-list{gap:10px 30px}
+  .brands-list span{font-size:19px}
+  .brands-list span+span::before{left:-16px}
   .warum-grid{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr}
@@ -396,13 +418,13 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
 </div>
 
 <!-- TRUST -->
-<div class="trust">
+<!-- Marken: an Ihre tatsächlich verbauten Hersteller anpassen -->
+<div class="brands">
   <div class="wrap">
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l7 4v6c0 5-3 8-7 10-4-2-7-5-7-10V6l7-4z" stroke-width="1.3"/></svg>Meisterbetrieb</div>
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M5 8l14 8M19 8L5 16" stroke-width="1.3"/></svg>F-Gas-zertifiziert</div>
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M12 3l7 4v5c0 5-3 8-7 9-4-1-7-4-7-9V7l7-4z" stroke-width="1.3"/></svg>5 Jahre Gewährleistung</div>
-    <div class="trust-item"><span class="trust-star">★★★★★</span>Google-Bewertungen</div>
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.3"/><path d="M12 7v5l3 2" stroke-width="1.3"/></svg>Reaktion in 24 Stunden</div>
+    <span class="brands-label">Markentechnik führender Hersteller</span>
+    <div class="brands-list">
+      <span>Daikin</span><span>Mitsubishi Electric</span><span>Panasonic</span><span>LG</span><span>Bosch</span>
+    </div>
   </div>
 </div>
 
@@ -521,7 +543,7 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
 <!-- WARUM -->
 <section class="warum pad-sm">
   <div class="wrap">
-    <div class="shead reveal"><span class="eyebrow">IV — Warum KlimaMax</span><h2 class="title">Fünf Gründe.<br>Ein Standard.</h2></div>
+    <div class="shead reveal"><span class="eyebrow">IV — Warum KlimaMax</span><h2 class="title">Gute Gründe.<br>Ein Standard.</h2></div>
     <div class="warum-grid reveal">
       <div class="wcard"><div class="wn">01</div><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1"/><path d="M12 7v5l3 2" stroke-width="1"/></svg><h4>Reaktion in 24 h</h4><p>Schnelle Rückmeldung und Sommer-Notdienst — wenn Hitze zum Problem wird, sind wir da.</p></div>
       <div class="wcard"><div class="wn">02</div><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 5-3 8-7 9-4-1-7-4-7-9V7l7-4z" stroke-width="1"/><path d="M9 12l2 2 4-4" stroke-width="1.2"/></svg><h4>Rechtssicher</h4><p>ASR A3.5, TA-Lärm-Nachweis und WEG-Vorlagen — sauber dokumentiert, nachvollziehbar begründet.</p></div>
@@ -560,10 +582,11 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   <div class="wrap">
     <div class="shead center reveal"><span class="eyebrow sole">VI — Referenzen</span><h2 class="title">Vertrauen, das <span class="serif-i">wächst.</span></h2></div>
     <div class="ref-grid reveal">
-      <div class="ref-card"><div class="ref-stars">★★★★★</div><div class="q">„[Platzhalter — echtes Kundenzitat eines Gewerbekunden aus NRW. Klar, sachlich, empfehlend.]“</div><div class="who">[Kundenname] · [Branche], [Stadt]</div></div>
-      <div class="ref-card"><div class="ref-stars">★★★★★</div><div class="q">„[Platzhalter — Privatkunde zu Beratung, sauberer Montage und Betreuung.]“</div><div class="who">[Kundenname] · Privatkunde, [Stadt]</div></div>
+      <!-- MUSTER-Referenzen — vor Livegang durch echte Kundenstimmen ersetzen -->
+      <div class="ref-card"><div class="ref-stars">★★★★★</div><div class="q">„Von der Beratung bis zur Wartung alles aus einer Hand — pünktlich, sauber und technisch nachvollziehbar. Genau das, was wir für unsere Praxis gesucht haben.“</div><div class="who">Dr. M. K. · Zahnarztpraxis, Köln</div></div>
+      <div class="ref-card"><div class="ref-stars">★★★★★</div><div class="q">„Unser Serverraum läuft seit der Umrüstung stabil — inklusive Monitoring und schneller Reaktion im Notfall. Ein verlässlicher Partner.“</div><div class="who">T. R. · IT-Leitung, Düsseldorf</div></div>
     </div>
-    <div class="logos reveal d1"><span>[Kunde]</span><span>[Kunde]</span><span>[Kunde]</span><span>[Kunde]</span></div>
+    <div class="logos reveal d1"><span>Arztpraxen</span><span>Kanzleien</span><span>Rechenzentren</span><span>Hausverwaltungen</span></div>
   </div>
 </section>
 
