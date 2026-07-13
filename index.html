@@ -278,8 +278,8 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
 .tech-cap{position:absolute;left:22px;bottom:16px;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--paper);z-index:2}
 
 /* ---- CINEMATIC BAND (photo 1 parallax) ---- */
-.band{position:relative;min-height:66vh;display:flex;align-items:center;justify-content:center;text-align:center;background:url('images/hero.jpg') center/cover fixed;overflow:hidden}
-.band::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(18,12,7,.68),rgba(24,16,9,.78))}
+.band{position:relative;min-height:58vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#2a2015,#141009);overflow:hidden}
+.band::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 22%,rgba(201,161,90,.16),transparent 58%)}
 .band .wrap{position:relative;z-index:2}
 .band .eyebrow{color:var(--brass-lt);justify-content:center;margin-bottom:34px}.band .eyebrow::before{background:var(--brass-lt)}
 .band .q{font-family:var(--serif);font-style:italic;font-size:clamp(30px,4.6vw,64px);line-height:1.3;max-width:960px;margin:0 auto;color:var(--paper);font-weight:300}
@@ -356,6 +356,19 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   .lrow{grid-template-columns:54px 1fr 36px}
   .lrow .lnum{font-size:28px}.lrow h3{font-size:24px}
 }
+/* Touch-Geraete: keine haengenden Hover-Zustaende — gleiche Darstellung wie Desktop-Grundzustand */
+@media(hover:none){
+  .lrow:hover{padding-left:20px;padding-right:20px}
+  .lrow:hover::before{width:0}
+  .lrow:hover h3,.lrow:hover .lnum{color:var(--ink)}
+  .lrow:hover p{color:var(--ink-soft)}
+  .lrow:hover .tag{color:var(--brass-deep)}
+  .lrow:hover .arr{border-color:var(--line-2);background:transparent}
+  .lrow:hover .arr svg{stroke:var(--ink)}
+  .btn:hover{color:var(--espresso)}
+  .btn:hover::before{transform:translateY(101%)}
+  .btn-ghost:hover{color:var(--paper)}
+}
 </style>
 </head>
 <body>
@@ -409,13 +422,6 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee">
-  <div class="marquee-track">
-    <span>Klimaanlagen</span><span>Serverraumkühlung</span><span>Wärmepumpen</span><span>Wartung &amp; Notdienst</span><span>Präzisionsklima</span><span>Praxis &amp; Büro</span>
-    <span>Klimaanlagen</span><span>Serverraumkühlung</span><span>Wärmepumpen</span><span>Wartung &amp; Notdienst</span><span>Präzisionsklima</span><span>Praxis &amp; Büro</span>
-  </div>
-</div>
 
 <!-- TRUST -->
 <!-- Marken: an Ihre tatsächlich verbauten Hersteller anpassen -->
