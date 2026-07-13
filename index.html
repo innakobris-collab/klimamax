@@ -126,9 +126,9 @@ header:not(.solid) .burger span{background:var(--paper)}
 .brands-list span+span::before{content:"";position:absolute;left:-23px;top:50%;width:3px;height:3px;border-radius:50%;background:rgba(201,161,90,.6);transform:translateY(-50%)}
 
 /* ---- SECTIONS ---- */
-.pad{padding:150px 0}.pad-sm{padding:110px 0}
-.shead{max-width:680px;margin-bottom:80px}
-.shead.center{margin:0 auto 80px;text-align:center}
+.pad{padding:110px 0}.pad-sm{padding:82px 0}
+.shead{max-width:680px;margin-bottom:62px}
+.shead.center{margin:0 auto 62px;text-align:center}
 .shead.center .eyebrow{justify-content:center}
 h2.title{font-size:clamp(42px,6vw,80px);color:var(--ink);margin-bottom:24px;line-height:1}
 .shead p{color:var(--ink-soft);font-size:17px;max-width:540px}
@@ -323,12 +323,14 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   .steps{grid-template-columns:1fr}
   .ref-grid{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr 1fr;gap:44px}
-  .pad{padding:100px 0}
-  .lrow{grid-template-columns:70px 1fr 40px;gap:20px}
+  .pad{padding:70px 0}
+  .pad-sm{padding:58px 0}
+  .shead,.shead.center{margin-bottom:44px}
+  .lrow{grid-template-columns:70px 1fr 40px;gap:20px;padding:34px 20px}
   .lrow .ldesc{display:none}
   .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-right{order:-1;height:56vh;min-height:320px}
-  .hero-left{padding:64px 0}
+  .hero-right{order:-1;height:52vh;min-height:300px}
+  .hero-left{padding:54px 0}
   .hero-left-inner{max-width:100%}
   .hero .lead{max-width:100%}
   .hero-frame{inset:18px}
@@ -340,9 +342,13 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   .brands-list{gap:10px 30px}
   .brands-list span{font-size:19px}
   .brands-list span+span::before{left:-16px}
-  .warum-grid{grid-template-columns:1fr}
-  .stats{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr}
+  .warum-grid{grid-template-columns:1fr 1fr;gap:34px 22px}
+  .wcard{padding:0 12px}
+  .wcard h4{font-size:22px}
+  .stats .n{font-size:46px}
+  .stat{padding:30px 24px}
+  .step{padding:34px 28px}
+  .foot-grid{grid-template-columns:1fr 1fr}
   .nav-right .btn{display:none}
   .eyebrow{display:block;letter-spacing:.22em;font-size:10px;line-height:1.6}
   .eyebrow::before{display:none}
@@ -501,23 +507,6 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
         <p class="ldesc">Wartungsverträge in drei Stufen, Dichtigkeitsprüfung nach F-Gas und ein Sommer-Notdienst, der reagiert, wenn es zählt.</p>
         <div class="arr"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke-width="1.4"/></svg></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMFORT -->
-<section class="comfort pad">
-  <div class="wrap comfort-grid2">
-    <div class="reveal">
-      <span class="eyebrow">Wohlbefinden</span>
-      <h2 class="ctitle">Gesunde Luft.<br><span class="serif-i">Spürbar besser.</span></h2>
-      <p class="cintro">Moderne Klimatechnik kühlt nicht nur — sie filtert, entfeuchtet und reinigt. Für Praxen, Büros und Zuhause: gleichbleibende Temperatur, saubere Luft und angenehme Ruhe.</p>
-      <div style="margin-top:34px"><a href="#kontakt" class="link-under">Beratung anfragen</a></div>
-    </div>
-    <div class="reveal d1 clist">
-      <div class="citem"><span class="cn">01</span><div><h4>Reine Luft</h4><p>Feinfilterung von Staub, Pollen und Allergenen — spürbar für Allergiker.</p></div></div>
-      <div class="citem"><span class="cn">02</span><div><h4>Ausgewogene Feuchte</h4><p>Kein trockenes Raumklima — angenehm für Haut, Augen und Konzentration.</p></div></div>
-      <div class="citem"><span class="cn">03</span><div><h4>Leiser Betrieb</h4><p>Flüsterleise Technik, die im Alltag und bei der Arbeit nicht stört.</p></div></div>
     </div>
   </div>
 </section>
