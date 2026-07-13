@@ -81,26 +81,26 @@ header:not(.solid) .logo small{color:var(--brass-lt)}
 .burger span{width:28px;height:1.5px;background:currentColor;display:block;transition:.3s}
 header:not(.solid) .burger span{background:var(--paper)}
 
-/* ---- HERO ---- */
-.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
-.hero-bg{position:absolute;inset:0;z-index:0;background:linear-gradient(135deg,#3a2c1d,#1c150d 60%,#0f0a06);}
-.hero-bg.has-img{background:url('images/hero.jpg') center 24%/cover no-repeat}
-.hero-bg::after{content:"";position:absolute;inset:0;animation:kb 22s ease-in-out infinite alternate}
-.hero-bg.has-img::after{background:inherit;background-size:cover}
-@keyframes kb{from{transform:scale(1)}to{transform:scale(1.09)}}
-.hero-veil{position:absolute;inset:0;z-index:1;background:
-  linear-gradient(180deg,rgba(18,12,7,.66) 0%,rgba(18,12,7,.34) 32%,rgba(18,12,7,.46) 56%,rgba(13,9,5,.92) 100%),
-  linear-gradient(90deg,rgba(18,12,7,.55) 0%,rgba(18,12,7,.12) 52%,rgba(18,12,7,0) 100%)}
-.hero-top{position:absolute;top:120px;left:0;right:0;z-index:3;text-align:center;color:var(--brass-lt)}
-.hero-top .k{font-family:var(--serif);font-size:15px;letter-spacing:.5em;text-transform:uppercase}
-.hero-inner{position:relative;z-index:3;color:var(--paper);padding-bottom:9vh}
-.hero h1{font-size:clamp(56px,10.5vw,164px);color:var(--paper);line-height:.94;margin-bottom:0;font-weight:300;text-shadow:0 2px 50px rgba(13,9,5,.55)}
-.hero .serif-i{color:var(--brass-lt);text-shadow:0 2px 46px rgba(13,9,5,.6)}
+/* ---- HERO (split) ---- */
+.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:1.2fr .8fr;background:var(--espresso);overflow:hidden}
+.hero-left{position:relative;display:flex;align-items:center;overflow:hidden;background:linear-gradient(150deg,#2a2015,#16100a)}
+.hero-left::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 22% 34%,rgba(201,161,90,.15),transparent 55%);pointer-events:none}
+.hero-left-inner{position:relative;z-index:2;width:100%;max-width:760px;padding:0 clamp(32px,5vw,88px);color:var(--paper)}
 .hero .eyebrow{color:var(--brass-lt)}.hero .eyebrow::before{background:var(--brass-lt)}
-.hero-meta{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:52px;padding-top:34px;border-top:1px solid rgba(248,243,234,.2);flex-wrap:wrap}
-.hero-meta .lead{font-size:18px;font-weight:300;max-width:440px;color:rgba(248,243,234,.9);line-height:1.7}
-.hero-cta{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
-.hero-places{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(248,243,234,.6);text-align:right}
+.hero h1{font-size:clamp(46px,5.4vw,94px);color:var(--paper);line-height:.98;margin-bottom:0;font-weight:300}
+.hero .serif-i{color:var(--brass-lt)}
+.hero-sub{margin-top:40px;padding-top:34px;border-top:1px solid rgba(248,243,234,.18);max-width:470px}
+.hero-sub .lead{font-size:17.5px;font-weight:300;color:rgba(248,243,234,.9);line-height:1.7;margin-bottom:32px}
+.hero-cta{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.hero-places{margin-top:36px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(248,243,234,.55)}
+.hero-right{position:relative;overflow:hidden;background:linear-gradient(150deg,#5a4630,#241a10)}
+.hero-photo{position:absolute;inset:0}
+.hero-photo.has-img{background:url('images/hero.jpg') center 30%/cover no-repeat}
+.hero-right::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:
+  linear-gradient(180deg,rgba(22,16,10,.5) 0%,rgba(22,16,10,0) 20%),
+  linear-gradient(100deg,rgba(22,16,10,.55) 0%,rgba(22,16,10,0) 32%)}
+.hero-frame{position:absolute;inset:28px;border:1px solid rgba(248,243,234,.24);z-index:3;pointer-events:none}
+.hero-cap{position:absolute;left:44px;bottom:36px;z-index:3;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:rgba(248,243,234,.78)}
 
 /* ---- MARQUEE ---- */
 .marquee{background:var(--espresso);color:var(--paper);padding:22px 0;overflow:hidden;white-space:nowrap;border-top:1px solid var(--line-light);border-bottom:1px solid var(--line-light)}
@@ -305,9 +305,12 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   .pad{padding:100px 0}
   .lrow{grid-template-columns:70px 1fr 40px;gap:20px}
   .lrow .ldesc{display:none}
-  .hero-meta{flex-direction:column;align-items:flex-start;gap:26px;width:100%}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-right{order:-1;height:56vh;min-height:320px}
+  .hero-left{padding:64px 0}
+  .hero-left-inner{max-width:100%}
   .hero .lead{max-width:100%}
-  .hero-places{text-align:left}
+  .hero-frame{inset:18px}
   .comfort-grid2{grid-template-columns:1fr;gap:44px}
   .band{background-attachment:scroll}
 }
@@ -316,15 +319,14 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   .warum-grid{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr}
-  .hero-top{display:none}
   .nav-right .btn{display:none}
   .eyebrow{display:block;letter-spacing:.22em;font-size:10px;line-height:1.6}
   .eyebrow::before{display:none}
-  .hero h1{font-size:clamp(36px,9.6vw,54px)}
+  .hero h1{font-size:clamp(38px,9.4vw,56px)}
   .hero .lead{max-width:100%;font-size:16px}
-  .hero-meta{width:100%}
   .hero-cta{width:100%}
   .hero-cta .btn{width:100%;justify-content:center}
+  .hero-cap{left:26px;bottom:22px}
   .band .q{font-size:clamp(24px,7vw,34px)}
   .comfort .citem{grid-template-columns:50px 1fr;gap:16px}
   .lrow{grid-template-columns:54px 1fr 36px}
@@ -360,17 +362,21 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero-bg" id="heroBg"></div>
-  <div class="hero-veil"></div>
-  <div class="hero-top"><span class="k">— Kühlen · Heizen · Sicher betreut —</span></div>
-  <div class="wrap hero-inner">
-    <span class="eyebrow">Klimatechnik für Unternehmen &amp; Zuhause</span>
-    <h1>Kühlen. Heizen.<br><span class="serif-i">Sicher betreut.</span></h1>
-    <div class="hero-meta">
-      <p class="lead">Vom Serverraum bis zur Praxis — Beratung, Montage und Wartung aus einer Hand. In ganz Nordrhein-Westfalen.</p>
-      <div class="hero-cta"><a href="#kontakt" class="btn"><span>Kostenlose Vor-Ort-Analyse</span></a></div>
-      <div class="hero-places">Köln<br>Düsseldorf<br>Essen · NRW</div>
+  <div class="hero-left">
+    <div class="hero-left-inner">
+      <span class="eyebrow">Klimatechnik für Unternehmen &amp; Zuhause</span>
+      <h1>Kühlen. Heizen.<br><span class="serif-i">Sicher betreut.</span></h1>
+      <div class="hero-sub">
+        <p class="lead">Vom Serverraum bis zur Praxis — Beratung, Montage und Wartung aus einer Hand. In ganz Nordrhein-Westfalen.</p>
+        <div class="hero-cta"><a href="#kontakt" class="btn"><span>Kostenlose Vor-Ort-Analyse</span></a></div>
+        <div class="hero-places">Köln · Düsseldorf · Essen · NRW</div>
+      </div>
     </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-photo" id="heroPhoto"></div>
+    <div class="hero-frame"></div>
+    <div class="hero-cap">LG DUAL Inverter · Wohnraum, NRW</div>
   </div>
 </section>
 
@@ -617,7 +623,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 document.getElementById('year').textContent=new Date().getFullYear();
 // swap in real photo if present
 const test=new Image();
-test.onload=()=>{document.getElementById('heroBg').classList.add('has-img');};
+test.onload=()=>{document.getElementById('heroPhoto').classList.add('has-img');};
 test.src='images/hero.jpg?'+Date.now();
 </script>
 </body>
