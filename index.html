@@ -3,14 +3,32 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>KlimaMax — Klimatechnik für Unternehmen und Zuhause in NRW</title>
-<meta name="description" content="KlimaMax — Klimatechnik in NRW. Kühlen. Heizen. Sicher betreut. Vom Serverraum bis zur Praxis: Beratung, Montage und Wartung aus einer Hand." />
-<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23201810'/><text x='50%25' y='50%25' dy='.34em' text-anchor='middle' font-family='Georgia,serif' font-size='29' font-weight='600' fill='%23C9A15A'>KM</text></svg>">
-<meta property="og:title" content="KlimaMax — Klimatechnik für Unternehmen und Zuhause in NRW" />
-<meta property="og:description" content="Kühlen. Heizen. Sicher betreut. Vom Serverraum bis zur Praxis — Beratung, Montage und Wartung aus einer Hand." />
+<title>KlimaGarant — Klimaanlagen für Zuhause in Essen &amp; Umgebung</title>
+<meta name="description" content="KlimaGarant — Klimaanlagen für Zuhause in Essen, Oberhausen, Mülheim, Bochum und Duisburg. Persönliche Beratung vor Ort, transparentes Angebot, saubere Montage." />
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23201810'/><text x='50%25' y='50%25' dy='.34em' text-anchor='middle' font-family='Georgia,serif' font-size='27' font-weight='600' fill='%23C9A15A'>KG</text></svg>">
+<meta property="og:title" content="KlimaGarant — Klimaanlagen für Zuhause in Essen &amp; Umgebung" />
+<meta property="og:description" content="Endlich wieder angenehm schlafen. Persönliche Beratung vor Ort, transparentes Angebot, saubere Montage — für Schlafzimmer, Wohnzimmer und Dachgeschoss." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://klimamax.vercel.app/images/hero.jpg" />
+<meta property="og:image" content="https://klimagarant.vercel.app/images/team-montage.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
+<!-- TODO vor Livegang: echte Firmendaten eintragen (Adresse, Tel, USt-IdNr., Handwerkskammer-Nr.) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "name": "KlimaGarant Klimatechnik",
+  "description": "Klimaanlagen für Zuhause in Essen und Umgebung. Persönliche Beratung vor Ort, Planung, Montage und Wartung aus einer Hand.",
+  "areaServed": ["Essen", "Oberhausen", "Mülheim an der Ruhr", "Bochum", "Duisburg", "Dortmund", "Nordrhein-Westfalen"],
+  "telephone": "+49-170-6554959",
+  "email": "anfrage@klimagarant.de",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Nordrhein-Westfalen",
+    "addressCountry": "DE"
+  },
+  "priceRange": "€€-€€€"
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -103,7 +121,7 @@ header:not(.solid) .burger span{background:var(--paper)}
 .hero-trust .ht-stars{color:var(--brass);letter-spacing:.12em;font-size:12px}
 .hero-right{position:relative;overflow:hidden;background:linear-gradient(150deg,#5a4630,#241a10)}
 .hero-photo{position:absolute;inset:0}
-.hero-photo.has-img{background:url('images/hero.jpg') center 30%/cover no-repeat}
+.hero-photo.has-img{background:url('images/team-montage.jpg') center 22%/cover no-repeat}
 .hero-right::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:
   linear-gradient(90deg,var(--espresso) 0%,rgba(32,24,15,.35) 8%,rgba(32,24,15,0) 20%),
   linear-gradient(180deg,rgba(22,16,10,.5) 0%,rgba(22,16,10,0) 18%),
@@ -186,6 +204,35 @@ h2.title{font-size:clamp(42px,6vw,80px);color:var(--ink);margin-bottom:24px;line
 .stat:hover{background:var(--espresso-2)}
 .stat .n{font-family:var(--serif);font-size:64px;color:var(--brass);line-height:1;margin-bottom:14px;font-weight:300}
 .stat .l{font-size:12px;letter-spacing:.1em;color:rgba(248,243,234,.6);text-transform:uppercase}
+.stats.light{background:var(--line);border-color:var(--line)}
+.stats.light .stat{background:var(--paper)}
+.stats.light .stat .n{color:var(--brass-deep);font-size:40px}
+.stats.light .stat .l{color:var(--ink-soft)}
+
+/* ---- ERKENNEN (Selbstidentifikation) ---- */
+.erkennen{background:var(--paper)}
+.id-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:20px}
+.id-card{padding:0 34px;border-left:1px solid var(--line)}
+.id-card:first-child{padding-left:0;border-left:0}
+.id-card .idn{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-deep);margin-bottom:18px}
+.id-card .idq{font-family:var(--serif);font-style:italic;font-size:18.5px;color:var(--ink);line-height:1.55}
+
+/* ---- PREISE ---- */
+.preise{background:var(--cream)}
+.preise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-light);border:1px solid var(--line-light);margin-top:24px}
+.pcard{background:var(--paper);padding:48px 40px}
+.pcard.highlight{background:var(--espresso);color:var(--paper)}
+.pcard .ptag{display:inline-block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-deep);border:1px solid var(--brass-deep);padding:5px 14px;margin-bottom:26px}
+.pcard.highlight .ptag{color:var(--brass);border-color:var(--brass)}
+.pcard h4{font-family:var(--serif);font-size:26px;font-weight:400;margin-bottom:10px;color:inherit}
+.pcard .pprice{font-family:var(--serif);font-size:42px;color:var(--brass-deep);margin-bottom:18px;line-height:1}
+.pcard.highlight .pprice{color:var(--brass)}
+.pcard p{font-size:14.5px;color:var(--ink-soft);line-height:1.7}
+.pcard.highlight p{color:rgba(248,243,234,.75)}
+.pcard ul{margin-top:18px;padding-left:0;list-style:none;font-size:13.5px;color:var(--ink-soft)}
+.pcard.highlight ul{color:rgba(248,243,234,.7)}
+.pcard ul li{padding:8px 0;border-top:1px solid var(--line)}
+.pcard.highlight ul li{border-top:1px solid var(--line-light)}
 
 /* ---- WARUM ---- */
 .warum{background:var(--paper)}
@@ -219,6 +266,19 @@ h2.title{font-size:clamp(42px,6vw,80px);color:var(--ink);margin-bottom:24px;line
 .logos{display:flex;justify-content:center;gap:70px;flex-wrap:wrap;margin-top:80px;opacity:.45}
 .logos span{font-family:var(--serif);font-size:23px;letter-spacing:.06em;color:var(--mocha)}
 
+/* ---- FAQ ---- */
+.faq-list{display:flex;flex-direction:column}
+.faq-item{border-top:1px solid var(--line);padding:28px 0}
+.faq-item:last-child{border-bottom:1px solid var(--line)}
+.faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:24px;cursor:pointer;list-style:none;font-family:var(--serif);font-size:23px;color:var(--ink);font-weight:400}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item .faq-plus{position:relative;width:22px;height:22px;flex-shrink:0}
+.faq-item .faq-plus::before,.faq-item .faq-plus::after{content:"";position:absolute;background:var(--brass-deep);transition:transform .35s ease}
+.faq-item .faq-plus::before{left:0;top:50%;width:100%;height:1px;transform:translateY(-50%)}
+.faq-item .faq-plus::after{left:50%;top:0;width:1px;height:100%;transform:translateX(-50%)}
+.faq-item[open] .faq-plus::after{transform:translateX(-50%) scaleY(0)}
+.faq-item p{font-size:15.5px;color:var(--ink-soft);max-width:680px;margin-top:18px;line-height:1.75}
+
 /* ---- FÖRDERUNG ---- */
 .foerder{background:linear-gradient(120deg,var(--mocha),var(--taupe));color:var(--paper);text-align:center;position:relative;overflow:hidden}
 .foerder::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(228,200,137,.25),transparent 55%)}
@@ -243,6 +303,32 @@ form{display:flex;flex-direction:column;gap:22px}
 .consent{display:flex;gap:13px;align-items:flex-start;font-size:13px;color:var(--ink-soft)}
 .consent input{margin-top:4px}
 .hp{position:absolute;left:-9999px}
+
+/* ---- KLIMA-CHECK QUIZ ---- */
+.quiz{border:1px solid var(--line-2);padding:40px}
+.quiz-progress{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+.quiz-bar{position:relative;height:2px;background:var(--line);margin-bottom:32px;overflow:hidden}
+.quiz-bar-fill{position:absolute;left:0;top:0;bottom:0;background:var(--brass);transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.qstep{display:none}
+.qstep.active{display:block;animation:heroFade .4s ease both}
+.qstep h4{font-family:var(--serif);font-size:24px;font-weight:400;margin-bottom:22px;color:var(--ink)}
+.qopts{display:flex;flex-direction:column;gap:12px}
+.qopt{display:flex;align-items:center;justify-content:space-between;width:100%;padding:16px 20px;border:1px solid var(--line-2);background:transparent;font-family:var(--sans);font-size:15px;font-weight:300;color:var(--ink);cursor:pointer;text-align:left;transition:border .3s,background .3s}
+.qopt:hover{border-color:var(--brass)}
+.qopt.sel{border-color:var(--brass);background:var(--cream-2)}
+.qopt svg{width:16px;height:16px;stroke:var(--brass-deep);flex-shrink:0;opacity:0;transition:opacity .3s}
+.qopt.sel svg{opacity:1}
+.qsum{font-size:13px;color:var(--ink-soft);margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line);min-height:1px}
+.qsum b{color:var(--brass-deep);font-weight:400}
+.qback{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-top:22px;cursor:pointer;background:none;border:0;padding:0}
+.qback:hover{color:var(--brass-deep)}
+@media(max-width:560px){.quiz{padding:28px 22px}}
+
+/* ---- WHATSAPP FLOAT ---- */
+.wa-float{position:fixed;right:28px;bottom:28px;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;z-index:150;box-shadow:0 14px 34px -8px rgba(20,40,20,.5);transition:transform .35s ease}
+.wa-float svg{width:28px;height:28px;color:#fff}
+.wa-float:hover{transform:scale(1.08)}
+@media(max-width:560px){.wa-float{right:18px;bottom:18px;width:52px;height:52px}.wa-float svg{width:25px;height:25px}}
 
 /* ---- FOOTER ---- */
 footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
@@ -271,6 +357,10 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
 .citem .cn{font-family:var(--serif);font-style:italic;font-size:36px;color:var(--brass-deep);line-height:1}
 .citem h4{font-family:var(--serif);font-size:27px;font-weight:400;margin-bottom:7px;color:var(--ink)}
 .citem p{font-size:15px;color:var(--ink-soft)}
+.comfort-img{position:relative;aspect-ratio:4/5;background:linear-gradient(150deg,#5a4630,#2a2015);overflow:hidden;box-shadow:0 40px 90px -30px rgba(36,28,19,.4)}
+.comfort-img.has-img{background:url('images/zuhause-schlafzimmer.jpg') center/cover}
+.comfort-cap{position:absolute;left:24px;bottom:22px;z-index:2;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--paper)}
+.comfort-img::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(22,16,10,.55),transparent 40%)}
 
 /* ---- TECH PANEL (photo 2 in beach) ---- */
 .tech-img{aspect-ratio:16/11;background:url('images/aussen.jpg') center/cover;position:relative;overflow:hidden;margin-bottom:1px;border:1px solid var(--line-light);filter:grayscale(.55) contrast(1.06) brightness(.92)}
@@ -278,7 +368,7 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
 .tech-cap{position:absolute;left:22px;bottom:16px;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--paper);z-index:2}
 
 /* ---- CINEMATIC BAND (photo 1 parallax) ---- */
-.band{position:relative;min-height:58vh;display:flex;align-items:center;justify-content:center;text-align:center;background:url('images/hero.jpg') center 30%/cover no-repeat;overflow:hidden}
+.band{position:relative;min-height:58vh;display:flex;align-items:center;justify-content:center;text-align:center;background:url('images/zuhause-paar-jung.jpg') center 30%/cover no-repeat;overflow:hidden}
 .band::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(18,12,7,.68),rgba(24,16,9,.8))}
 .band .wrap{position:relative;z-index:2}
 .band .eyebrow{color:var(--brass-lt);justify-content:center;margin-bottom:34px}.band .eyebrow::before{background:var(--brass-lt)}
@@ -320,6 +410,9 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   .philo-text{padding-left:0}
   .warum-grid{grid-template-columns:1fr 1fr;gap:44px 0}
   .wcard{border-left:0;padding:0 22px}.wcard:nth-child(odd){padding-left:0}
+  .id-grid{grid-template-columns:1fr 1fr;gap:34px 0}
+  .id-card{border-left:0;padding:0 22px}.id-card:nth-child(odd){padding-left:0}
+  .preise-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
   .ref-grid{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr 1fr;gap:44px}
@@ -345,6 +438,8 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   .warum-grid{grid-template-columns:1fr 1fr;gap:34px 22px}
   .wcard{padding:0 12px}
   .wcard h4{font-size:22px}
+  .id-grid{grid-template-columns:1fr;gap:28px}
+  .id-card{padding:0}
   .stats .n{font-size:46px}
   .stat{padding:30px 24px}
   .step{padding:34px 28px}
@@ -379,20 +474,26 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
 </head>
 <body>
 
+<!-- WHATSAPP -->
+<a href="https://wa.me/491706554959?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Klimaanlage." class="wa-float" target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.8-1-2.6-1.9-.6-.7-1-1.3-1.3-1.9-.1-.2 0-.4.1-.5.2-.2.4-.4.5-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1 0 1.3.9 2.5 1 2.7.1.2 1.5 2.4 3.7 3.4 2.2 1 2.2.7 2.6.6.4-.1 1.3-.5 1.5-1 .2-.5.2-.9.1-1-.1-.1-.2-.1-.5-.2z"/><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-3 .9.8-2.9-.2-.3A8 8 0 1112 20z"/></svg>
+</a>
+
 <!-- HEADER -->
 <header id="header">
   <div class="wrap nav">
-    <a href="#top" class="logo"><span class="k">Klima</span><b>Max</b><small>Klimatechnik · NRW</small></a>
+    <a href="#top" class="logo"><span class="k">Klima</span><b>Garant</b><small>Klimatechnik · NRW</small></a>
     <ul class="nav-links">
-      <li><a href="#leistungen">Leistungen</a></li>
-      <li><a href="#serverraum">Serverraum</a></li>
+      <li><a href="#zuhause">Zuhause</a></li>
+      <li><a href="#preise">Preise</a></li>
       <li><a href="#ablauf">Ablauf</a></li>
       <li><a href="#referenzen">Referenzen</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
     <div class="nav-right">
-      <a href="tel:+49000000000" class="nav-tel">+49 (0) 000 000 000</a>
-      <a href="#kontakt" class="btn" style="padding:14px 28px"><span>Anfrage</span></a>
+      <a href="tel:+491706554959" class="nav-tel">0170 655 4959</a>
+      <a href="#kontakt" class="btn" style="padding:14px 28px"><span>Klima-Check</span></a>
       <button class="burger" id="burger" aria-label="Menü"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -400,19 +501,19 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
 
 <div class="mmenu" id="mmenu">
   <button class="close" id="mclose" aria-label="Schließen">&times;</button>
-  <a href="#leistungen">Leistungen</a><a href="#serverraum">Serverraum</a><a href="#ablauf">Ablauf</a><a href="#referenzen">Referenzen</a><a href="#kontakt">Kontakt</a>
+  <a href="#zuhause">Zuhause</a><a href="#preise">Preise</a><a href="#ablauf">Ablauf</a><a href="#referenzen">Referenzen</a><a href="#faq">FAQ</a><a href="#kontakt">Kontakt</a>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-left">
     <div class="hero-left-inner">
-      <span class="eyebrow">Klimatechnik für Unternehmen &amp; Zuhause</span>
-      <h1>Kühlen. Heizen.<br><span class="serif-i">Sicher betreut.</span></h1>
-      <p class="lead">Vom Serverraum bis zur Praxis — Beratung, Montage und Wartung aus einer Hand. In ganz Nordrhein-Westfalen.</p>
+      <span class="eyebrow">Klimaanlagen für Zuhause · Essen &amp; Umgebung</span>
+      <h1>Endlich wieder<br><span class="serif-i">durchschlafen.</span></h1>
+      <p class="lead">Schlafzimmer, Dachgeschoss oder Wohnzimmer — wir planen, montieren und betreuen Ihre Klimaanlage persönlich. Festpreis vorab, keine Überraschungen danach.</p>
       <div class="hero-cta">
-        <a href="#kontakt" class="btn"><span>Kostenlose Vor-Ort-Analyse</span></a>
-        <a href="#referenzen" class="link-under" style="color:var(--paper);border-color:var(--brass)">Referenzen ansehen</a>
+        <a href="#kontakt" class="btn"><span>Jetzt Klima-Check starten</span></a>
+        <a href="#referenzen" class="link-under" style="color:var(--paper);border-color:var(--brass)">Beispiele ansehen</a>
       </div>
       <div class="hero-trust">
         <span class="ht-stars">★★★★★</span>
@@ -424,7 +525,7 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   </div>
   <div class="hero-right">
     <div class="hero-photo" id="heroPhoto"></div>
-    <div class="hero-cap">LG DUAL Inverter · Wohnraum, NRW</div>
+    <div class="hero-cap">Daikin · Fachgerechte Außenmontage</div>
   </div>
 </section>
 
@@ -435,7 +536,7 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   <div class="wrap">
     <span class="brands-label">Markentechnik führender Hersteller</span>
     <div class="brands-list">
-      <span>Daikin</span><span>Mitsubishi Electric</span><span>Panasonic</span><span>LG</span><span>Bosch</span>
+      <span>Daikin</span><span>Haier</span><span>Mitsubishi Electric</span><span>Panasonic</span><span>LG</span>
     </div>
   </div>
 </div>
@@ -457,79 +558,96 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
         <div class="philo-slogan">Kühlen · Heizen</div>
       </div>
       <div class="philo-badge">
-        <span style="position:relative;z-index:2">K<b>M</b></span>
-        <svg class="ring" viewBox="0 0 150 150"><defs><path id="cp" d="M75,75 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs><text><textPath href="#cp" startOffset="0%">· Klimatechnik · NRW · Meisterbetrieb ·</textPath></text></svg>
+        <span style="position:relative;z-index:2">K<b>G</b></span>
+        <svg class="ring" viewBox="0 0 150 150"><defs><path id="cp" d="M75,75 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs><text><textPath href="#cp" startOffset="0%">· Klimatechnik · NRW · Festpreis ·</textPath></text></svg>
       </div>
     </div>
     <div class="philo-text reveal d1">
       <span class="eyebrow">I — Unsere Philosophie</span>
       <h2>Nicht das Gerät.<br><span class="serif-i">Das Ergebnis.</span></h2>
-      <p class="big">„Überhitzte Räume kosten Geld — Ausfall von Technik, unzufriedene Kunden, ab 30 °C gesetzliche Pflichten.“</p>
-      <p>Wir verkaufen keine Klimaanlage. Wir schaffen stabile Temperaturen — wirtschaftlich, rechtssicher und nachvollziehbar. Von der ersten Analyse über die fachgerechte Montage bis zur laufenden Wartung.</p>
-      <p>Ein Ansprechpartner. Verbindliche Termine. Ruhig, präzise, zuverlässig — so, wie gute Technik sein sollte.</p>
-      <div style="margin-top:38px"><a href="#leistungen" class="link-under">Leistungen entdecken</a></div>
+      <p class="big">„Niemand ist verpflichtet, Ihre Nächte kühler zu machen — außer Sie selbst.“</p>
+      <p>Wir fangen nicht beim Gerät an. Wir fangen bei der Nacht an, in der Sie zuletzt schlecht geschlafen haben — und überlegen von dort aus, welcher Raum, welche Lösung und welcher Aufwand wirklich nötig sind.</p>
+      <p>Ein Ansprechpartner. Verbindliche Termine. Und niemand, der Ihnen verkauft, was Sie nicht brauchen.</p>
+      <div style="margin-top:38px"><a href="#zuhause" class="link-under">Kennen Sie das?</a></div>
     </div>
   </div>
 </section>
 
-<!-- LEISTUNGEN -->
-<section class="leist pad" id="leistungen">
+<!-- ERKENNEN (Selbstidentifikation) -->
+<section class="erkennen pad-sm" id="zuhause">
   <div class="wrap">
-    <div class="shead reveal"><span class="eyebrow">II — Leistungen</span><h2 class="title">Alles aus<br>einer Hand.</h2><p>Planung, Installation und Betreuung — für Unternehmen und private Auftraggeber in ganz Nordrhein-Westfalen.</p></div>
-    <div class="reveal">
-      <div class="lrow">
-        <div class="lnum">01</div>
-        <div><span class="tag">B2B</span><h3>Für Unternehmen</h3></div>
-        <p class="ldesc">Büros, Gewerbe, Filialketten und Hausverwaltungen — zuverlässige Klimatisierung mit Wartungsvertrag und festem Ansprechpartner.</p>
-        <div class="arr"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke-width="1.4"/></svg></div>
-      </div>
-      <div class="lrow">
-        <div class="lnum">02</div>
-        <div><span class="tag">Kritische Infrastruktur</span><h3>Serverraum &amp; Technik</h3></div>
-        <p class="ldesc">Präzisionsklima für Serverräume und Schaltschränke — mit Redundanz, Monitoring und Notdienst. Damit Technik nie überhitzt.</p>
-        <div class="arr"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke-width="1.4"/></svg></div>
-      </div>
-      <div class="lrow">
-        <div class="lnum">03</div>
-        <div><span class="tag">Gesundheit &amp; Komfort</span><h3>Praxen &amp; Büros</h3></div>
-        <p class="ldesc">Leise, hygienische Raumluft für Arztpraxen, Kanzleien und Büros — angenehmes Klima, das Patienten und Mitarbeiter spüren.</p>
-        <div class="arr"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke-width="1.4"/></svg></div>
-      </div>
-      <div class="lrow">
-        <div class="lnum">04</div>
-        <div><span class="tag">B2C · Förderfähig</span><h3>Klima für Zuhause</h3></div>
-        <p class="ldesc">Kühlen im Sommer, Heizen im Winter — als Luft-Luft-Wärmepumpe mit möglicher Förderung. Sauber montiert, angenehm leise.</p>
-        <div class="arr"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke-width="1.4"/></svg></div>
-      </div>
-      <div class="lrow">
-        <div class="lnum">05</div>
-        <div><span class="tag">Service</span><h3>Wartung &amp; Notdienst</h3></div>
-        <p class="ldesc">Wartungsverträge in drei Stufen, Dichtigkeitsprüfung nach F-Gas und ein Sommer-Notdienst, der reagiert, wenn es zählt.</p>
-        <div class="arr"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke-width="1.4"/></svg></div>
-      </div>
+    <div class="shead reveal"><span class="eyebrow sole">Zuhause &amp; Komfort</span><h2 class="title">Kennen Sie<br>das?</h2></div>
+    <div class="id-grid reveal">
+      <div class="id-card"><span class="idn">Dachgeschoss</span><p class="idq">„Oben wird es im Sommer unerträglich heiß — in schlechten Nächten zeigt das Thermometer im Kinderzimmer auch mal 40 Grad.“</p></div>
+      <div class="id-card"><span class="idn">Schlafzimmer</span><p class="idq">„Ich möchte nachts endlich wieder durchschlafen, ohne Ventilator oder lautes mobiles Klimagerät.“</p></div>
+      <div class="id-card"><span class="idn">Wohnzimmer</span><p class="idq">„Am Nachmittag heizt sich das Wohnzimmer auf. Wir möchten uns zu Hause wieder wohlfühlen.“</p></div>
+      <div class="id-card"><span class="idn">Mehrere Räume</span><p class="idq">„Wir möchten mehrere Zimmer kühlen, aber möglichst wenig Außengeräte an der Fassade haben.“</p></div>
     </div>
   </div>
 </section>
 
-<!-- BEACHHEAD -->
-<section class="beach pad" id="serverraum">
-  <div class="beach-img"></div>
-  <div class="wrap beach-grid">
-    <div class="reveal">
-      <span class="eyebrow">III — Kritische Infrastruktur</span>
-      <h2>Wenn Ausfall<br>keine Option ist.</h2>
-      <p>Serverräume, Schaltschränke und Technikräume kühlen wir mit Präzisionsklima, Redundanz und permanentem Monitoring. Überhitzung bedeutet Stillstand — und Stillstand bedeutet Kosten.</p>
-      <div class="beach-quote">„Die Frage ist nicht, ob jedes Jahr heißer wird — sondern ob Ihre Technik darauf vorbereitet ist.“</div>
-      <p style="margin-bottom:36px">Rechtssicher nach ASR A3.5, dokumentiert nach F-Gas-Verordnung, betreut über einen Wartungsvertrag mit klaren Reaktionszeiten.</p>
-      <a href="#kontakt" class="btn"><span>Serverraum-Analyse anfragen</span></a>
+<!-- COMFORT (Zuhause) -->
+<section class="comfort pad">
+  <div class="wrap comfort-grid2">
+    <div class="comfort-imgwrap reveal">
+      <div class="comfort-img" id="comfortImg">
+        <div class="comfort-cap">Schlafzimmer · Angenehme Temperatur</div>
+      </div>
     </div>
     <div class="reveal d1">
-      <div class="tech-img"><div class="tech-cap">Außengeräte · Fachgerechte Montage</div></div>
-      <div class="stats">
-        <div class="stat"><div class="n">24/7</div><div class="l">Monitoring &amp; Notdienst</div></div>
-        <div class="stat"><div class="n">&lt;24h</div><div class="l">Reaktionszeit</div></div>
-        <div class="stat"><div class="n">26°</div><div class="l">ASR A3.5 Schwelle</div></div>
-        <div class="stat"><div class="n">100%</div><div class="l">Dokumentiert &amp; geprüft</div></div>
+      <span class="eyebrow sole">Das Ergebnis</span>
+      <h2 class="ctitle">Ein Zuhause,<br><span class="serif-i">das atmet.</span></h2>
+      <p class="cintro">23 Uhr, draußen wird es endlich kühler — nur bei Ihnen nicht. Im Schnitt verlieren wir in Deutschland 56 Stunden Schlaf pro Jahr an zu warme Nächte. Ihr Vermieter ist rechtlich meist nicht verpflichtet, daran etwas zu ändern — die Entscheidung liegt bei Ihnen.</p>
+      <div class="stats light" style="margin-top:30px">
+        <div class="stat"><div class="n">56 Std.</div><div class="l">Verlorener Schlaf pro Jahr, Ø Deutschland</div></div>
+        <div class="stat"><div class="n">60%</div><div class="l">Haushalte ohne wirksamen Hitzeschutz</div></div>
+      </div>
+      <div class="clist" style="margin-top:30px">
+        <div class="citem"><div class="cn">01</div><div><h4>Angenehm schlafen</h4><p>Die richtige Temperatur im Schlafzimmer, die ganze Nacht — kein Ventilator, kein offenes Fenster mit Straßenlärm.</p></div></div>
+        <div class="citem"><div class="cn">02</div><div><h4>Leise nach TA Lärm</h4><p>Außengeräte so platziert und gewählt, dass Nachbarn und Nachtruhe kein Thema werden.</p></div></div>
+        <div class="citem"><div class="cn">03</div><div><h4>Ehrlich kalkuliert</h4><p>Ab 1.990&nbsp;€ für den einfachsten Fall, transparent geprüft für alles andere — siehe unten.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREISE -->
+<section class="preise pad-sm" id="preise">
+  <div class="wrap">
+    <div class="shead reveal"><span class="eyebrow sole">Transparente Preise</span><h2 class="title">Ehrlich kalkuliert.<br>Keine Überraschungen.</h2><p>Ein Fall ist wirklich einfach und hat einen festen Preis. Alles andere hängt von Ihrem Objekt ab — wir sagen das offen, statt eine Zahl zu erfinden, die später nicht stimmt.</p></div>
+    <div class="preise-grid reveal">
+      <div class="pcard highlight">
+        <span class="ptag">Festpreis</span>
+        <h4>1 Raum · Single-Split</h4>
+        <div class="pprice">ab 1.990&nbsp;€</div>
+        <p>Haier-Gerät, Standardmontage, Leitungslänge bis 3&nbsp;m — Inbetriebnahme und Einweisung inklusive.</p>
+        <ul>
+          <li>Innen- &amp; Außengerät</li>
+          <li>Montage &amp; Inbetriebnahme</li>
+          <li>Keine versteckten Kosten</li>
+        </ul>
+      </div>
+      <div class="pcard">
+        <span class="ptag">Individuell</span>
+        <h4>2 Räume · Multi-Split</h4>
+        <div class="pprice">Auf Anfrage</div>
+        <p>Abhängig von Raumaufteilung und Leitungswegen — wir rechnen es für Sie durch, bevor Sie sich entscheiden.</p>
+        <ul>
+          <li>Zwei Innengeräte</li>
+          <li>Gemeinsames Außengerät möglich</li>
+          <li>Festpreis nach Vor-Ort-Prüfung</li>
+        </ul>
+      </div>
+      <div class="pcard">
+        <span class="ptag">Individuell</span>
+        <h4>3+ Räume · Maßlösung</h4>
+        <div class="pprice">Auf Anfrage</div>
+        <p>Jedes größere Projekt ist anders — Gerätewahl, Trassen und Montageaufwand bestimmen wir gemeinsam mit Ihnen vor Ort.</p>
+        <ul>
+          <li>Individuelle Planung</li>
+          <li>Passende Gerätekombination</li>
+          <li>Festpreis nach Vor-Ort-Prüfung</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -538,12 +656,12 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
 <!-- WARUM -->
 <section class="warum pad-sm">
   <div class="wrap">
-    <div class="shead reveal"><span class="eyebrow">IV — Warum KlimaMax</span><h2 class="title">Gute Gründe.<br>Ein Standard.</h2></div>
+    <div class="shead reveal"><span class="eyebrow">II — Warum KlimaGarant</span><h2 class="title">Wir schauen<br>genauer hin.</h2><p>Bevor wir Ihnen etwas anbieten.</p></div>
     <div class="warum-grid reveal">
-      <div class="wcard"><div class="wn">01</div><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1"/><path d="M12 7v5l3 2" stroke-width="1"/></svg><h4>Reaktion in 24 h</h4><p>Schnelle Rückmeldung und Sommer-Notdienst — wenn Hitze zum Problem wird, sind wir da.</p></div>
-      <div class="wcard"><div class="wn">02</div><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 5-3 8-7 9-4-1-7-4-7-9V7l7-4z" stroke-width="1"/><path d="M9 12l2 2 4-4" stroke-width="1.2"/></svg><h4>Rechtssicher</h4><p>ASR A3.5, TA-Lärm-Nachweis und WEG-Vorlagen — sauber dokumentiert, nachvollziehbar begründet.</p></div>
-      <div class="wcard"><div class="wn">03</div><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a5 5 0 015 5c0 3-5 8-5 8s-5-5-5-8a5 5 0 015-5z" stroke-width="1"/><path d="M5 20h14" stroke-width="1"/></svg><h4>Alles aus einer Hand</h4><p>Ein Ansprechpartner von der Planung bis zur Wartung. Keine Schnittstellen, keine Ausreden.</p></div>
-      <div class="wcard"><div class="wn">04</div><svg viewBox="0 0 24 24" fill="none"><path d="M12 15a4 4 0 100-8 4 4 0 000 8z" stroke-width="1"/><path d="M12 15v6M9 21h6" stroke-width="1"/><path d="M5 8l1-3h12l1 3" stroke-width="1"/></svg><h4>Meisterbetrieb</h4><p>Fachgerechte Ausführung, geprüfte Qualität und 5 Jahre Gewährleistung auf unsere Arbeit.</p></div>
+      <div class="wcard"><div class="wn">01</div><svg viewBox="0 0 24 24" fill="none"><path d="M12 21c-4-3-8-6.5-8-11a5 5 0 0110-1 5 5 0 0110 1c0 4.5-4 8-8 11-1 .7-2 .7-4 0z" stroke-width="1"/></svg><h4>Persönliche Besichtigung</h4><p>Wir schauen uns Ihre Räume und die Einbaumöglichkeiten direkt vor Ort an — nicht am Telefon geschätzt.</p></div>
+      <div class="wcard"><div class="wn">02</div><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V9l8-5 8 5v10M9 19v-6h6v6" stroke-width="1"/></svg><h4>Technische Planung</h4><p>Geräteposition, Leitungsführung, Kondensat und Stromversorgung sind vorab durchdacht — nicht während der Montage improvisiert.</p></div>
+      <div class="wcard"><div class="wn">03</div><svg viewBox="0 0 24 24" fill="none"><path d="M6 4h9l3 3v13H6z" stroke-width="1"/><path d="M9 11h6M9 15h6" stroke-width="1"/></svg><h4>Transparentes Angebot</h4><p>Sie sehen vorher, welche Geräte und Leistungen für Ihr Projekt vorgesehen sind — und was das kostet.</p></div>
+      <div class="wcard"><div class="wn">04</div><svg viewBox="0 0 24 24" fill="none"><path d="M4 5c0 9 6 15 15 15v-4l-4-2-2 2c-3-1-5-3-6-6l2-2-2-4H4z" stroke-width="1"/></svg><h4>Wir gehen ans Telefon</h4><p>Schnelle Rückmeldung statt Funkstille — plus Wartung und Sommer-Notdienst, wenn es drauf ankommt.</p></div>
     </div>
   </div>
 </section>
@@ -551,11 +669,11 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
 <!-- ABLAUF -->
 <section class="ablauf pad" id="ablauf">
   <div class="wrap">
-    <div class="shead reveal"><span class="eyebrow">V — Ablauf</span><h2 class="title">In sechs Schritten<br>zum Ziel.</h2></div>
+    <div class="shead reveal"><span class="eyebrow">III — Ablauf</span><h2 class="title">In sechs Schritten<br>zum Ziel.</h2></div>
     <div class="steps reveal">
-      <div class="step"><div class="sn">Schritt 01</div><h4>Erstgespräch</h4><p>Wir hören zu, verstehen Ihre Räume und Ihre Anforderungen — ohne Verkaufsdruck.</p></div>
+      <div class="step"><div class="sn">Schritt 01</div><h4>Klima-Check</h4><p>Drei kurze Fragen zu Ihren Räumen — Sie wissen sofort, worum es geht, wir auch.</p></div>
       <div class="step"><div class="sn">Schritt 02</div><h4>Vor-Ort-Termin</h4><p>Bestandsaufnahme und Kühllastberechnung. Die technische Prüfung ersetzt Pauschalannahmen.</p></div>
-      <div class="step"><div class="sn">Schritt 03</div><h4>Angebot</h4><p>Drei nachvollziehbare Varianten — Basis, Optimal, Premium. Klar kalkuliert, verbindlich.</p></div>
+      <div class="step"><div class="sn">Schritt 03</div><h4>Angebot</h4><p>Passend zu 1, 2 oder mehreren Räumen — klar kalkuliert, verbindlich, siehe Preise oben.</p></div>
       <div class="step"><div class="sn">Schritt 04</div><h4>Montage</h4><p>Fachgerecht, sauber und termintreu — durch unser eigenes, geschultes Team.</p></div>
       <div class="step"><div class="sn">Schritt 05</div><h4>Abnahme</h4><p>Inbetriebnahme, Einweisung und vollständige Dokumentation nach Norm.</p></div>
       <div class="step"><div class="sn">Schritt 06</div><h4>Wartung</h4><p>Laufende Betreuung, Monitoring und Notdienst — damit Ihre Anlage dauerhaft läuft.</p></div>
@@ -568,57 +686,128 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   <div class="wrap">
     <span class="eyebrow sole">Unser Versprechen</span>
     <div class="q">„Wir verkaufen keine Klimaanlage.<br>Wir schaffen ein Klima, auf das Sie sich verlassen können.“</div>
-    <div class="src">KlimaMax · Klimatechnik NRW</div>
+    <div class="src">KlimaGarant · Klimatechnik NRW</div>
   </div>
 </section>
 
 <!-- REFERENZEN -->
 <section class="refs pad" id="referenzen">
   <div class="wrap">
-    <div class="shead center reveal"><span class="eyebrow sole">VI — Referenzen</span><h2 class="title">Vertrauen, das <span class="serif-i">wächst.</span></h2></div>
+    <div class="shead center reveal"><span class="eyebrow sole">IV — Referenzen</span><h2 class="title">Vertrauen, das <span class="serif-i">wächst.</span></h2></div>
     <div class="ref-grid reveal">
       <!-- MUSTER-Referenzen — vor Livegang durch echte Kundenstimmen ersetzen -->
-      <div class="ref-card"><div class="ref-stars">★★★★★</div><div class="q">„Von der Beratung bis zur Wartung alles aus einer Hand — pünktlich, sauber und technisch nachvollziehbar. Genau das, was wir für unsere Praxis gesucht haben.“</div><div class="who">Dr. M. K. · Zahnarztpraxis, Köln</div></div>
-      <div class="ref-card"><div class="ref-stars">★★★★★</div><div class="q">„Unser Serverraum läuft seit der Umrüstung stabil — inklusive Monitoring und schneller Reaktion im Notfall. Ein verlässlicher Partner.“</div><div class="who">T. R. · IT-Leitung, Düsseldorf</div></div>
+      <div class="ref-card"><div class="ref-stars">★★★★★</div><div class="q">„Endlich schlafen wir nachts wieder durch — ohne lautes mobiles Gerät neben dem Bett.“</div><div class="who">Familie S. · Schlafzimmer, Essen</div></div>
+      <div class="ref-card"><div class="ref-stars">★★★★★</div><div class="q">„Unser Dachgeschoss war im Sommer kaum nutzbar. Jetzt ist es der kühlste Raum im Haus.“</div><div class="who">M. &amp; T. · Dachgeschoss, Mülheim an der Ruhr</div></div>
     </div>
-    <div class="logos reveal d1"><span>Arztpraxen</span><span>Kanzleien</span><span>Rechenzentren</span><span>Hausverwaltungen</span></div>
+    <div class="logos reveal d1"><span>Essen</span><span>Oberhausen</span><span>Mülheim an der Ruhr</span><span>Bochum</span><span>Duisburg</span></div>
   </div>
 </section>
 
-<!-- FÖRDERUNG -->
-<section class="foerder pad-sm">
-  <div class="wrap reveal">
-    <span class="eyebrow sole" style="color:#F3E4C4;display:block;margin-bottom:22px">Förderung</span>
-    <h2>Bis zu 30 % Zuschuss möglich.</h2>
-    <p>Eine reversible Klimaanlage ist eine Luft-Luft-Wärmepumpe — und damit unter Umständen über die KfW förderfähig. Wir prüfen die Förderfähigkeit Ihres Projekts vor der Auftragserteilung.</p>
-    <a href="#kontakt" class="btn btn-ghost"><span>Förderfähigkeit prüfen</span></a>
+<!-- FAQ -->
+<section class="faq pad" id="faq">
+  <div class="wrap">
+    <div class="shead reveal"><span class="eyebrow sole">Fragen &amp; Antworten</span><h2 class="title">Was Sie wissen<br>sollten.</h2></div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary><span>Was kostet eine Klimaanlage mit Montage?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Für 1 Raum mit Standardbedingungen: ab 1.990&nbsp;€ komplett, siehe unsere Preis-Übersicht. Bei mehreren Räumen oder längeren Leitungswegen hängt die Summe vom Objekt ab — die genaue Zahl bekommen Sie nach der Vor-Ort-Analyse, nicht als geschätzte Zahl am Telefon.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span>Was, wenn die Monteure schlampig arbeiten?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Das ist die häufigste Sorge, die wir hören — und zu Recht, schlechte Erfahrungen mit Handwerkern sind leider verbreitet. Deshalb dokumentieren wir den Zustand von Leitungen und Kabelkanälen vor und nach der Montage mit Fotos, bevor etwas verschlossen wird. Was dahinter passiert, bleibt kein Geheimnis.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span>Stört das Außengerät die Nachbarn?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Nach der TA Lärm gelten je nach Gebiet und Tageszeit feste Grenzwerte. Wir wählen Gerät und Montageort so, dass diese eingehalten werden — wichtig gerade bei Reihenhäusern und Mehrfamilienhäusern, wo das Außengerät nah am Nachbargrundstück hängt.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span>Wie schnell antworten Sie wirklich?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Wir wissen, dass viele Handwerksbetriebe schwer erreichbar sind — manche Kunden erzählen uns, sie hätten über ein Dutzend Firmen angeschrieben und kaum eine Antwort bekommen. Nach Ihrem Klima-Check melden wir uns in der Regel noch am selben Tag, telefonisch oder per WhatsApp.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span>Wie läuft die Wartung ab und was kostet sie?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Wir bieten Wartungsverträge mit Dichtigkeitsprüfung nach F-Gas-Verordnung, fester Reaktionszeit und Sommer-Notdienst. Der genaue Umfang richtet sich nach Ihrer Anlage — wir legen ihn im Angebot offen, nicht im Kleingedruckten.</p>
+      </details>
+    </div>
   </div>
 </section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Was kostet eine Klimaanlage mit Montage?","acceptedAnswer":{"@type":"Answer","text":"Für 1 Raum mit Standardbedingungen ab 1.990 € komplett. Bei mehreren Räumen oder längeren Leitungswegen ergibt sich der Preis nach der Vor-Ort-Analyse."}},
+    {"@type":"Question","name":"Was, wenn die Monteure schlampig arbeiten?","acceptedAnswer":{"@type":"Answer","text":"Wir dokumentieren den Zustand von Leitungen und Kabelkanälen vor und nach der Montage mit Fotos, bevor etwas verschlossen wird."}},
+    {"@type":"Question","name":"Stört das Außengerät die Nachbarn?","acceptedAnswer":{"@type":"Answer","text":"Nach der TA Lärm gelten je nach Gebiet und Tageszeit feste Grenzwerte, die bei Gerätewahl und Montageort berücksichtigt werden."}},
+    {"@type":"Question","name":"Wie schnell antworten Sie wirklich?","acceptedAnswer":{"@type":"Answer","text":"Nach dem Klima-Check melden wir uns in der Regel noch am selben Tag, telefonisch oder per WhatsApp."}},
+    {"@type":"Question","name":"Wie läuft die Wartung ab und was kostet sie?","acceptedAnswer":{"@type":"Answer","text":"Wartungsverträge mit Dichtigkeitsprüfung nach F-Gas-Verordnung, fester Reaktionszeit und Sommer-Notdienst."}}
+  ]
+}
+</script>
 
 <!-- KONTAKT -->
 <section class="kontakt pad" id="kontakt">
   <div class="wrap k-grid">
     <div class="k-left reveal">
-      <span class="eyebrow">VII — Kontakt</span>
-      <h2>Kostenlose<br><span class="serif-i">Vor-Ort-Analyse.</span></h2>
-      <p>Erzählen Sie uns kurz von Ihrem Objekt. Wir melden uns innerhalb von 24 Stunden mit den nächsten Schritten — unverbindlich.</p>
+      <span class="eyebrow">V — Klima-Check</span>
+      <h2>In 60 Sekunden<br><span class="serif-i">zur Einschätzung.</span></h2>
+      <p>Drei kurze Fragen, dann Ihre Telefonnummer — mehr nicht. Wir melden uns innerhalb von 24 Stunden mit den nächsten Schritten, unverbindlich.</p>
       <div class="k-contact">
-        <div class="row"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5c0 9 6 15 15 15v-4l-4-2-2 2c-3-1-5-3-6-6l2-2-2-4H4z" stroke-width="1.2"/></svg><div><span class="lbl">Telefon</span>+49 (0) 000 000 000</div></div>
-        <div class="row"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="1.5" stroke-width="1.2"/><path d="M4 6l8 6 8-6" stroke-width="1.2"/></svg><div><span class="lbl">E-Mail</span>anfrage@klimamax.de</div></div>
-        <div class="row"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z" stroke-width="1.2"/><circle cx="12" cy="9" r="2.5" stroke-width="1.2"/></svg><div><span class="lbl">Region</span>Köln · Düsseldorf · Essen · NRW</div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5c0 9 6 15 15 15v-4l-4-2-2 2c-3-1-5-3-6-6l2-2-2-4H4z" stroke-width="1.2"/></svg><div><span class="lbl">Telefon</span>0170 655 4959</div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="1.5" stroke-width="1.2"/><path d="M4 6l8 6 8-6" stroke-width="1.2"/></svg><div><span class="lbl">E-Mail</span>anfrage@klimagarant.de</div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z" stroke-width="1.2"/><circle cx="12" cy="9" r="2.5" stroke-width="1.2"/></svg><div><span class="lbl">Region</span>Essen · Oberhausen · Mülheim · Bochum · Duisburg · Dortmund</div></div>
       </div>
     </div>
     <div class="reveal d1">
-      <form onsubmit="event.preventDefault();this.querySelector('.formmsg').style.display='block';">
-        <div class="hp"><label>Bitte leer lassen<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-        <div class="field"><label>Name</label><input type="text" name="name" required placeholder="Ihr Name"></div>
-        <div class="field"><label>Telefon oder E-Mail</label><input type="text" name="kontakt" required placeholder="So erreichen wir Sie"></div>
-        <div class="field"><label>Art des Objekts</label><select name="objekt"><option>Unternehmen / Gewerbe</option><option>Serverraum / Technikraum</option><option>Praxis / Büro</option><option>Privat / Zuhause</option><option>Wartung / Bestandsanlage</option></select></div>
-        <div class="field"><label>Nachricht</label><textarea name="nachricht" placeholder="Welche Räume, welches Anliegen?"></textarea></div>
-        <label class="consent"><input type="checkbox" required> Ich habe die <a href="#" style="border-bottom:1px solid var(--brass)">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
-        <button type="submit" class="btn" style="justify-content:center"><span>Anfrage senden</span></button>
-        <p class="formmsg" style="display:none;color:var(--brass-deep);font-size:14px">Danke — Demo-Formular. Im Live-Betrieb geht die Anfrage per E-Mail/Telegram an das Team.</p>
-      </form>
+      <div class="quiz" id="klimaCheck">
+        <div class="quiz-progress"><span>Klima-Check</span><span id="qProgressLabel">Schritt 1 von 4</span></div>
+        <div class="quiz-bar"><div class="quiz-bar-fill" id="qBarFill" style="width:25%"></div></div>
+
+        <div class="qstep active" data-step="1">
+          <h4>Welchen Bereich möchten Sie klimatisieren?</h4>
+          <div class="qopts">
+            <button type="button" class="qopt" data-field="bereich" data-value="Schlafzimmer">Schlafzimmer<svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2"/></svg></button>
+            <button type="button" class="qopt" data-field="bereich" data-value="Wohnzimmer">Wohnzimmer<svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2"/></svg></button>
+            <button type="button" class="qopt" data-field="bereich" data-value="Dachgeschoss">Dachgeschoss<svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2"/></svg></button>
+            <button type="button" class="qopt" data-field="bereich" data-value="Mehrere Räume">Mehrere Räume<svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2"/></svg></button>
+          </div>
+        </div>
+
+        <div class="qstep" data-step="2">
+          <h4>Wie viele Räume insgesamt?</h4>
+          <div class="qopts">
+            <button type="button" class="qopt" data-field="anzahl" data-value="1 Raum">1 Raum<svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2"/></svg></button>
+            <button type="button" class="qopt" data-field="anzahl" data-value="2 Räume">2 Räume<svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2"/></svg></button>
+            <button type="button" class="qopt" data-field="anzahl" data-value="3 oder mehr">3 oder mehr<svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2"/></svg></button>
+          </div>
+          <button type="button" class="qback" data-back="1">← Zurück</button>
+        </div>
+
+        <div class="qstep" data-step="3">
+          <h4>Was ist Ihnen am wichtigsten?</h4>
+          <div class="qopts">
+            <button type="button" class="qopt" data-field="prioritaet" data-value="Leise Kühlung">Leise Kühlung<svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2"/></svg></button>
+            <button type="button" class="qopt" data-field="prioritaet" data-value="Schnelle Abkühlung">Schnelle Abkühlung<svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2"/></svg></button>
+            <button type="button" class="qopt" data-field="prioritaet" data-value="Geringer Verbrauch">Geringer Verbrauch<svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2"/></svg></button>
+            <button type="button" class="qopt" data-field="prioritaet" data-value="Unauffällige Montage">Unauffällige Montage<svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2"/></svg></button>
+          </div>
+          <button type="button" class="qback" data-back="2">← Zurück</button>
+        </div>
+
+        <div class="qstep" data-step="4">
+          <h4>Fast fertig — wie erreichen wir Sie?</h4>
+          <div class="qsum" id="qSummary"></div>
+          <form id="qForm" onsubmit="event.preventDefault();document.getElementById('qFormMsg').style.display='block';this.querySelector('button[type=submit]').disabled=true;">
+            <div class="hp"><label>Bitte leer lassen<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+            <div class="field"><label>Name</label><input type="text" name="name" required placeholder="Ihr Name"></div>
+            <div class="field"><label>Telefon oder WhatsApp</label><input type="text" name="kontakt" required placeholder="So erreichen wir Sie"></div>
+            <label class="consent"><input type="checkbox" required> Ich habe die <a href="datenschutz.html" style="border-bottom:1px solid var(--brass)">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
+            <button type="submit" class="btn" style="justify-content:center;margin-top:6px"><span>Jetzt unverbindlich anfragen</span></button>
+            <p class="formmsg" id="qFormMsg" style="display:none;color:var(--brass-deep);font-size:14px">Danke — Demo-Formular. Im Live-Betrieb geht die Anfrage per WhatsApp/E-Mail direkt an das Team.</p>
+          </form>
+          <button type="button" class="qback" data-back="3">← Zurück</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -627,12 +816,12 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
 <footer>
   <div class="wrap">
     <div class="foot-grid">
-      <div class="foot-col"><div class="foot-logo">Klima<b>Max</b></div><p>Klimatechnik für Unternehmen und Zuhause in Nordrhein-Westfalen.<br>Kühlen. Heizen. Sicher betreut.</p></div>
-      <div class="foot-col"><h5>Leistungen</h5><ul><li><a href="#leistungen">Für Unternehmen</a></li><li><a href="#serverraum">Serverraum &amp; Technik</a></li><li><a href="#leistungen">Praxen &amp; Büros</a></li><li><a href="#leistungen">Klima für Zuhause</a></li><li><a href="#leistungen">Wartung &amp; Notdienst</a></li></ul></div>
-      <div class="foot-col"><h5>Unternehmen</h5><ul><li><a href="#ablauf">Ablauf</a></li><li><a href="#referenzen">Referenzen</a></li><li><a href="#kontakt">Kontakt</a></li><li><a href="#">Ratgeber</a></li></ul></div>
-      <div class="foot-col"><h5>Rechtliches</h5><ul><li><a href="#">Impressum</a></li><li><a href="#">Datenschutzerklärung</a></li><li><a href="#">AGB</a></li><li><a href="#">Cookie-Einstellungen</a></li></ul></div>
+      <div class="foot-col"><div class="foot-logo">Klima<b>Garant</b></div><p>Klimaanlagen für Zuhause in Essen und Umgebung.<br>Kühlen. Heizen. Sicher betreut.</p></div>
+      <div class="foot-col"><h5>Leistungen</h5><ul><li><a href="#zuhause">Klima für Zuhause</a></li><li><a href="#preise">Preise</a></li><li><a href="#ablauf">Wartung &amp; Notdienst</a></li></ul></div>
+      <div class="foot-col"><h5>KlimaGarant</h5><ul><li><a href="#ablauf">Ablauf</a></li><li><a href="#referenzen">Referenzen</a></li><li><a href="#kontakt">Kontakt</a></li></ul></div>
+      <div class="foot-col"><h5>Rechtliches</h5><ul><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutzerklärung</a></li><li><a href="agb.html">AGB</a></li><li><a href="#">Cookie-Einstellungen</a></li></ul></div>
     </div>
-    <div class="foot-bottom"><span>© <span id="year"></span> KlimaMax Klimatechnik · Nordrhein-Westfalen</span><span>Meisterbetrieb · F-Gas-zertifiziert · 5 Jahre Gewährleistung</span></div>
+    <div class="foot-bottom"><span>© <span id="year"></span> KlimaGarant Klimatechnik · Nordrhein-Westfalen</span><span>Meisterbetrieb · F-Gas-zertifiziert · 5 Jahre Gewährleistung</span></div>
   </div>
 </footer>
 
@@ -649,7 +838,43 @@ document.getElementById('year').textContent=new Date().getFullYear();
 // swap in real photo if present
 const test=new Image();
 test.onload=()=>{document.getElementById('heroPhoto').classList.add('has-img');};
-test.src='images/hero.jpg?'+Date.now();
+test.src='images/team-montage.jpg?'+Date.now();
+const test2=new Image();
+test2.onload=()=>{document.getElementById('comfortImg').classList.add('has-img');};
+test2.src='images/zuhause-schlafzimmer.jpg?'+Date.now();
+
+// Klima-Check quiz
+const quiz=document.getElementById('klimaCheck');
+if(quiz){
+  const answers={};
+  const steps=[...quiz.querySelectorAll('.qstep')];
+  const bar=document.getElementById('qBarFill');
+  const label=document.getElementById('qProgressLabel');
+  const total=steps.length;
+  function showStep(n){
+    steps.forEach(s=>s.classList.toggle('active',Number(s.dataset.step)===n));
+    bar.style.width=(n/total*100)+'%';
+    label.textContent='Schritt '+n+' von '+total;
+    if(n===total)renderSummary();
+  }
+  function renderSummary(){
+    const parts=[answers.bereich,answers.anzahl,answers.prioritaet].filter(Boolean);
+    document.getElementById('qSummary').innerHTML=parts.length?('Ihre Auswahl: <b>'+parts.join(' · ')+'</b>'):'';
+  }
+  quiz.querySelectorAll('.qopt').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const field=btn.dataset.field;
+      const step=btn.closest('.qstep');
+      step.querySelectorAll('.qopt').forEach(o=>o.classList.remove('sel'));
+      btn.classList.add('sel');
+      answers[field]=btn.dataset.value;
+      setTimeout(()=>showStep(Number(step.dataset.step)+1),280);
+    });
+  });
+  quiz.querySelectorAll('.qback').forEach(btn=>{
+    btn.addEventListener('click',()=>showStep(Number(btn.dataset.back)));
+  });
+}
 </script>
 </body>
 </html>
