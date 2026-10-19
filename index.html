@@ -211,11 +211,25 @@ h2.title{font-size:clamp(42px,6vw,80px);color:var(--ink);margin-bottom:24px;line
 
 /* ---- ERKENNEN (Selbstidentifikation) ---- */
 .erkennen{background:var(--paper)}
-.id-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:20px}
-.id-card{padding:0 34px;border-left:1px solid var(--line)}
-.id-card:first-child{padding-left:0;border-left:0}
-.id-card .idn{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-deep);margin-bottom:18px}
-.id-card .idq{font-family:var(--serif);font-style:italic;font-size:18.5px;color:var(--ink);line-height:1.55}
+.erk-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:70px;align-items:center;margin-top:30px}
+.erk-img{position:relative;aspect-ratio:3/4;background:linear-gradient(150deg,#5a4630,#2a2015);overflow:hidden;box-shadow:0 40px 90px -30px rgba(36,28,19,.45)}
+.erk-img.has-img{background:url('images/zuhause-frau-sofa.jpg') center/cover}
+.erk-img::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(22,16,10,.5),transparent 42%)}
+.erk-cap{position:absolute;left:22px;bottom:20px;z-index:2;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--paper)}
+.erk-rows{display:flex;flex-direction:column}
+.erk-row{position:relative;display:grid;grid-template-columns:140px 1fr;gap:28px;align-items:start;padding:26px 0;border-top:1px solid var(--line);transition:padding .5s cubic-bezier(.2,.7,.2,1);overflow:hidden;cursor:default}
+.erk-row:last-child{border-bottom:1px solid var(--line)}
+.erk-row::before{content:"“";position:absolute;right:14px;top:-6px;font-family:var(--serif);font-size:88px;color:var(--brass);opacity:.14;line-height:1;z-index:0;transition:opacity .5s}
+.erk-row::after{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--espresso);transition:width .5s cubic-bezier(.6,0,.2,1);z-index:0}
+.erk-row:hover{padding-left:24px;padding-right:24px}
+.erk-row:hover::after{width:100%}
+.erk-row:hover::before{opacity:.22;color:var(--brass-lt)}
+.erk-row>*{position:relative;z-index:1}
+.erk-row .idn{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-deep);transition:color .5s;padding-top:4px;display:block}
+.erk-row:hover .idn{color:var(--brass)}
+.erk-row .idq{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ink);line-height:1.5;transition:color .5s;margin:0}
+.erk-row:hover .idq{color:var(--paper)}
+@media(hover:none){.erk-row:hover{padding-left:0;padding-right:0}.erk-row:hover::after{width:0}.erk-row:hover .idn{color:var(--brass-deep)}.erk-row:hover .idq{color:var(--ink)}.erk-row:hover::before{opacity:.14;color:var(--brass)}}
 
 /* ---- PREISE ---- */
 .preise{background:var(--cream)}
@@ -240,7 +254,10 @@ h2.title{font-size:clamp(42px,6vw,80px);color:var(--ink);margin-bottom:24px;line
 .wcard{padding:0 40px;border-left:1px solid var(--line)}
 .wcard:first-child{padding-left:0;border-left:0}
 .wcard .wn{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--brass-deep);margin-bottom:26px}
-.wcard svg{width:36px;height:36px;stroke:var(--taupe);stroke-width:1;margin-bottom:24px}
+.wcard .wicon{width:62px;height:62px;border-radius:50%;background:var(--cream-2);display:flex;align-items:center;justify-content:center;margin-bottom:24px;transition:background .4s}
+.wcard:hover .wicon{background:var(--brass)}
+.wcard svg{width:28px;height:28px;stroke:var(--taupe);stroke-width:1;transition:stroke .4s}
+.wcard:hover svg{stroke:var(--espresso)}
 .wcard h4{font-family:var(--serif);font-size:27px;font-weight:400;margin-bottom:14px;color:var(--ink)}
 .wcard p{font-size:14.5px;color:var(--ink-soft)}
 
@@ -374,6 +391,7 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
 .band .eyebrow{color:var(--brass-lt);justify-content:center;margin-bottom:34px}.band .eyebrow::before{background:var(--brass-lt)}
 .band .q{font-family:var(--serif);font-style:italic;font-size:clamp(30px,4.6vw,64px);line-height:1.3;max-width:960px;margin:0 auto;color:var(--paper);font-weight:300}
 .band .src{margin-top:34px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--brass-lt)}
+.band-2{background-image:url('images/zuhause-paar-aelter.jpg');min-height:46vh}
 
 /* ---- HERO INTRO ---- */
 @keyframes heroIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
@@ -410,8 +428,7 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   .philo-text{padding-left:0}
   .warum-grid{grid-template-columns:1fr 1fr;gap:44px 0}
   .wcard{border-left:0;padding:0 22px}.wcard:nth-child(odd){padding-left:0}
-  .id-grid{grid-template-columns:1fr 1fr;gap:34px 0}
-  .id-card{border-left:0;padding:0 22px}.id-card:nth-child(odd){padding-left:0}
+  .erk-grid{grid-template-columns:1fr;gap:40px}
   .preise-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
   .ref-grid{grid-template-columns:1fr}
@@ -438,8 +455,8 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   .warum-grid{grid-template-columns:1fr 1fr;gap:34px 22px}
   .wcard{padding:0 12px}
   .wcard h4{font-size:22px}
-  .id-grid{grid-template-columns:1fr;gap:28px}
-  .id-card{padding:0}
+  .erk-row{grid-template-columns:1fr;gap:6px;padding:22px 0}
+  .erk-row::before{font-size:58px;top:-4px;right:4px}
   .stats .n{font-size:46px}
   .stat{padding:30px 24px}
   .step{padding:34px 28px}
@@ -577,11 +594,18 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
 <section class="erkennen pad-sm" id="zuhause">
   <div class="wrap">
     <div class="shead reveal"><span class="eyebrow sole">Zuhause &amp; Komfort</span><h2 class="title">Kennen Sie<br>das?</h2></div>
-    <div class="id-grid reveal">
-      <div class="id-card"><span class="idn">Dachgeschoss</span><p class="idq">„Oben wird es im Sommer unerträglich heiß — in schlechten Nächten zeigt das Thermometer im Kinderzimmer auch mal 40 Grad.“</p></div>
-      <div class="id-card"><span class="idn">Schlafzimmer</span><p class="idq">„Ich möchte nachts endlich wieder durchschlafen, ohne Ventilator oder lautes mobiles Klimagerät.“</p></div>
-      <div class="id-card"><span class="idn">Wohnzimmer</span><p class="idq">„Am Nachmittag heizt sich das Wohnzimmer auf. Wir möchten uns zu Hause wieder wohlfühlen.“</p></div>
-      <div class="id-card"><span class="idn">Mehrere Räume</span><p class="idq">„Wir möchten mehrere Zimmer kühlen, aber möglichst wenig Außengeräte an der Fassade haben.“</p></div>
+    <div class="erk-grid">
+      <div class="erk-imgwrap reveal">
+        <div class="erk-img" id="erkImg">
+          <div class="erk-cap">Wohnzimmer · Angenehme Kühle</div>
+        </div>
+      </div>
+      <div class="erk-rows reveal d1">
+        <div class="erk-row"><span class="idn">Dachgeschoss</span><p class="idq">„Oben wird es im Sommer unerträglich heiß — in schlechten Nächten zeigt das Thermometer im Kinderzimmer auch mal 40 Grad.“</p></div>
+        <div class="erk-row"><span class="idn">Schlafzimmer</span><p class="idq">„Ich möchte nachts endlich wieder durchschlafen, ohne Ventilator oder lautes mobiles Klimagerät.“</p></div>
+        <div class="erk-row"><span class="idn">Wohnzimmer</span><p class="idq">„Am Nachmittag heizt sich das Wohnzimmer auf. Wir möchten uns zu Hause wieder wohlfühlen.“</p></div>
+        <div class="erk-row"><span class="idn">Mehrere Räume</span><p class="idq">„Wir möchten mehrere Zimmer kühlen, aber möglichst wenig Außengeräte an der Fassade haben.“</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -608,6 +632,15 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
         <div class="citem"><div class="cn">03</div><div><h4>Ehrlich kalkuliert</h4><p>Ab 1.990&nbsp;€ für den einfachsten Fall, transparent geprüft für alles andere — siehe unten.</p></div></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- CINEMATIC BAND 2 -->
+<section class="band band-2">
+  <div class="wrap">
+    <span class="eyebrow sole">Auch für die Familie</span>
+    <div class="q">„Auch wenn die Eltern zu Besuch kommen — ein Zuhause, das bei jedem Wetter angenehm bleibt.“</div>
+    <div class="src">KlimaGarant · Klimatechnik NRW</div>
   </div>
 </section>
 
@@ -658,10 +691,10 @@ footer{background:var(--espresso);color:var(--paper);padding:100px 0 40px}
   <div class="wrap">
     <div class="shead reveal"><span class="eyebrow">II — Warum KlimaGarant</span><h2 class="title">Wir schauen<br>genauer hin.</h2><p>Bevor wir Ihnen etwas anbieten.</p></div>
     <div class="warum-grid reveal">
-      <div class="wcard"><div class="wn">01</div><svg viewBox="0 0 24 24" fill="none"><path d="M12 21c-4-3-8-6.5-8-11a5 5 0 0110-1 5 5 0 0110 1c0 4.5-4 8-8 11-1 .7-2 .7-4 0z" stroke-width="1"/></svg><h4>Persönliche Besichtigung</h4><p>Wir schauen uns Ihre Räume und die Einbaumöglichkeiten direkt vor Ort an — nicht am Telefon geschätzt.</p></div>
-      <div class="wcard"><div class="wn">02</div><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V9l8-5 8 5v10M9 19v-6h6v6" stroke-width="1"/></svg><h4>Technische Planung</h4><p>Geräteposition, Leitungsführung, Kondensat und Stromversorgung sind vorab durchdacht — nicht während der Montage improvisiert.</p></div>
-      <div class="wcard"><div class="wn">03</div><svg viewBox="0 0 24 24" fill="none"><path d="M6 4h9l3 3v13H6z" stroke-width="1"/><path d="M9 11h6M9 15h6" stroke-width="1"/></svg><h4>Transparentes Angebot</h4><p>Sie sehen vorher, welche Geräte und Leistungen für Ihr Projekt vorgesehen sind — und was das kostet.</p></div>
-      <div class="wcard"><div class="wn">04</div><svg viewBox="0 0 24 24" fill="none"><path d="M4 5c0 9 6 15 15 15v-4l-4-2-2 2c-3-1-5-3-6-6l2-2-2-4H4z" stroke-width="1"/></svg><h4>Wir gehen ans Telefon</h4><p>Schnelle Rückmeldung statt Funkstille — plus Wartung und Sommer-Notdienst, wenn es drauf ankommt.</p></div>
+      <div class="wcard"><div class="wn">01</div><div class="wicon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21c-4-3-8-6.5-8-11a5 5 0 0110-1 5 5 0 0110 1c0 4.5-4 8-8 11-1 .7-2 .7-4 0z" stroke-width="1"/></svg></div><h4>Persönliche Besichtigung</h4><p>Wir schauen uns Ihre Räume und die Einbaumöglichkeiten direkt vor Ort an — nicht am Telefon geschätzt.</p></div>
+      <div class="wcard"><div class="wn">02</div><div class="wicon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V9l8-5 8 5v10M9 19v-6h6v6" stroke-width="1"/></svg></div><h4>Technische Planung</h4><p>Geräteposition, Leitungsführung, Kondensat und Stromversorgung sind vorab durchdacht — nicht während der Montage improvisiert.</p></div>
+      <div class="wcard"><div class="wn">03</div><div class="wicon"><svg viewBox="0 0 24 24" fill="none"><path d="M6 4h9l3 3v13H6z" stroke-width="1"/><path d="M9 11h6M9 15h6" stroke-width="1"/></svg></div><h4>Transparentes Angebot</h4><p>Sie sehen vorher, welche Geräte und Leistungen für Ihr Projekt vorgesehen sind — und was das kostet.</p></div>
+      <div class="wcard"><div class="wn">04</div><div class="wicon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5c0 9 6 15 15 15v-4l-4-2-2 2c-3-1-5-3-6-6l2-2-2-4H4z" stroke-width="1"/></svg></div><h4>Wir gehen ans Telefon</h4><p>Schnelle Rückmeldung statt Funkstille — plus Wartung und Sommer-Notdienst, wenn es drauf ankommt.</p></div>
     </div>
   </div>
 </section>
@@ -842,6 +875,9 @@ test.src='images/team-montage.jpg?'+Date.now();
 const test2=new Image();
 test2.onload=()=>{document.getElementById('comfortImg').classList.add('has-img');};
 test2.src='images/zuhause-schlafzimmer.jpg?'+Date.now();
+const test3=new Image();
+test3.onload=()=>{document.getElementById('erkImg').classList.add('has-img');};
+test3.src='images/zuhause-frau-sofa.jpg?'+Date.now();
 
 // Klima-Check quiz
 const quiz=document.getElementById('klimaCheck');
